@@ -1,14 +1,15 @@
 
 #include <unistd.h>
 
-void init_nb(int nb[9], int n)
+void init_nb(int *nb, int n)
 {
 	int	i;
 
-	i = 0;
-	while (i < n)
+	i = 1;
+	while (i - 1 < n)
 	{
-		nb[i] = i + 1;
+		*nb = i;
+		nb++;
 		i++;
 	}
 }
@@ -16,12 +17,14 @@ void init_nb(int nb[9], int n)
 void	print_nb(int *nb, int n)
 {
 	int	value;
+	int	i;
 
-	while (n - 1 >= 0)
+	i = 0;
+	while (i < n)
 	{
-		value = nb[n - 1] + '0';
+		value = nb[i] + '0';
 		write(1, &value, 1);
-		n--;
+		i++;
 	}
 }
 
@@ -31,7 +34,7 @@ void	it_max_nb(int nb[9], int n)
 	int	ref;
 
 	ref = n;
-	max_value = 8;
+	max_value = 9;
 	while (nb[ref - 1] == max_value && ref > 0)
 	{
 		ref--;
