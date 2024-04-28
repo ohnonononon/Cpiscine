@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:18:14 by nimatura          #+#    #+#             */
-/*   Updated: 2024/04/28 11:52:18 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/04/28 12:57:54 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	init_nb(int *nb, int n)
 	i = 0;
 	while (i < n)
 	{
-		*nb = i;
-		nb++;
+		nb[i] = i;
 		i++;
 	}
 }
