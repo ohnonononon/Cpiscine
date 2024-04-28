@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/28 11:10:59 by nimatura          #+#    #+#             */
+/*   Updated: 2024/04/28 11:11:18 by nimatura         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 
@@ -22,18 +33,3 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb / 10);
 	pchar(nb % 10 + '0');
 }
-/***
-int	main(void)
-{
-	ft_putnbr(0);
-	pchar('\n');
-	ft_putnbr(123);
-	pchar('\n');
-	ft_putnbr(-123);
-	pchar('\n');
-	ft_putnbr('@');
-	pchar('\n');
-	ft_putnbr(12-3);
-	pchar('\n');
-	return (0);
-}***/

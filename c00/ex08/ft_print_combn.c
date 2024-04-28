@@ -1,12 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/28 11:18:14 by nimatura          #+#    #+#             */
+/*   Updated: 2024/04/28 11:52:18 by nimatura         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 
-void init_nb(int *nb, int n)
+void	init_nb(int *nb, int n)
 {
 	int	i;
 
-	i = 1;
-	while (i - 1 < n)
+	i = 0;
+	while (i < n)
 	{
 		*nb = i;
 		nb++;
@@ -28,7 +39,23 @@ void	print_nb(int *nb, int n)
 	}
 }
 
-void	it_max_nb(int nb[9], int n)
+int	check_end(int *nb, int n)
+{
+	int	max_value;
+
+	max_value = 9;
+	while (nb[n - 1] == max_value && n > 0)
+	{
+		max_value--;
+		n--;
+	}
+	if (n == 0)
+		return (1);
+	write(1, ", ", 2);
+	return (0);
+}
+
+void	it_max_nb(int *nb, int n)
 {
 	int	max_value;
 	int	ref;
@@ -42,7 +69,7 @@ void	it_max_nb(int nb[9], int n)
 	}
 	if (ref > 0)
 		nb[ref - 1]++;
-	while (ref + 1 < n && ref > 0)	
+	while (ref <= n - 1 && ref > 0)
 	{
 		nb[ref] = nb[ref - 1] + 1;
 		ref++;
@@ -52,29 +79,16 @@ void	it_max_nb(int nb[9], int n)
 void	ft_print_combn(int n)
 {
 	int	nb[9];
-	int	ref;
-	int	test;
 
 	init_nb(nb, n);
-	test = 10;
-	while (*nb <= (10 - n) && test > 0)
+	while (*nb <= (10 - n))
 	{
 		print_nb(nb, n);
-		write(1, "\n", 1);
-		if (nb[n - 1] > 9)
+		if ((check_end(nb, n)))
+			return ;
+		if (nb[n - 1] >= 9)
 			it_max_nb(nb, n);
 		else
 			nb[n - 1]++;
-		test--;
 	}
-}
-
-// 9: 1-2-3-4 -5-6-7-8-9
-// 8: 2-3-4-5 -6-7-8-9
-// 1: 9
-
-int	main(void)
-{
-	ft_print_combn(2);
-	return (0);
 }
