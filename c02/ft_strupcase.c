@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 11:04:32 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/02 16:54:12 by nimatura         ###   ########.fr       */
+/*   Created: 2024/05/02 17:04:30 by nimatura          #+#    #+#             */
+/*   Updated: 2024/05/02 17:04:32 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+char	*ft_strupcase(char *str)
 {
-	while (*str)
-		write(1, str++, 1);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
 }

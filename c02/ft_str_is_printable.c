@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 11:04:32 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/02 16:54:12 by nimatura         ###   ########.fr       */
+/*   Created: 2024/05/02 17:04:14 by nimatura          #+#    #+#             */
+/*   Updated: 2024/05/02 17:04:18 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+int	ft_str_is_printable(char *str)
 {
-	while (*str)
-		write(1, str++, 1);
+	if (!str || *str == '\0')
+		return (1);
+	while (*str >= 32 && *str <= 126)
+		str++;
+	if (*str == '\0')
+		return (1);
+	return (0)
 }

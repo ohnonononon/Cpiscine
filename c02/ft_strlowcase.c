@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 11:04:32 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/02 16:54:12 by nimatura         ###   ########.fr       */
+/*   Created: 2024/05/02 17:04:48 by nimatura          #+#    #+#             */
+/*   Updated: 2024/05/02 17:04:53 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+char	*ft_strlowcase(char *str)
 {
-	while (*str)
-		write(1, str++, 1);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
+		i++;
+	}
+	return (str);
 }

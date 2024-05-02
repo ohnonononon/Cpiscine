@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 11:04:32 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/02 16:54:12 by nimatura         ###   ########.fr       */
+/*   Created: 2024/05/02 17:03:00 by nimatura          #+#    #+#             */
+/*   Updated: 2024/05/02 17:03:21 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+int	ft_str_is_numeric(char *str)
 {
-	while (*str)
-		write(1, str++, 1);
+	if (!str || *str == '\0')
+		return (1);
+	while (*str >= '0' && *str <= '9')
+		str++;
+	if (*str == '\0')
+		return (1);
+	return (0)
 }

@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 11:04:32 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/02 16:54:12 by nimatura         ###   ########.fr       */
+/*   Created: 2024/05/02 17:01:36 by nimatura          #+#    #+#             */
+/*   Updated: 2024/05/02 17:02:22 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// ft is nonsense: redo
 
-void	ft_putstr(char *str)
+char	*ft_strncpy(char *dst, char *src, unsigned int n)
 {
-	while (*str)
-		write(1, str++, 1);
+	unsigned int	n;
+
+	n = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	return (i);
 }
