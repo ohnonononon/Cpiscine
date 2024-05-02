@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 17:01:36 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/02 19:22:24 by nimatura         ###   ########.fr       */
+/*   Created: 2024/05/02 17:04:14 by nimatura          #+#    #+#             */
+/*   Updated: 2024/05/02 19:22:43 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dst, char *src, unsigned int n)
+int	ft_str_is_printable(char *str)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (i < n && src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	if (!str || *str == '\0')
+		return (1);
+	while (*str >= 32 && *str <= 126)
+		str++;
+	if (*str == '\0')
+		return (1);
+	return (0);
 }

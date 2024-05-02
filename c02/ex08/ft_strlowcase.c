@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 17:01:36 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/02 19:22:24 by nimatura         ###   ########.fr       */
+/*   Created: 2024/05/02 17:04:48 by nimatura          #+#    #+#             */
+/*   Updated: 2024/05/02 17:04:53 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dst, char *src, unsigned int n)
+char	*ft_strlowcase(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (i < n && src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dst[i] = src[i];
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
 		i++;
 	}
-	while (i < n)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	return (str);
 }
