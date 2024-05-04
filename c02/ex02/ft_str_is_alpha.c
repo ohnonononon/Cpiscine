@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 17:02:32 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/02 17:02:40 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/02 19:20:58 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ int	ft_str_is_alpha(char *str)
 		str++;
 	if (*str == '\0')
 		return (1);
-	return (0)
+	return (0);
 }
