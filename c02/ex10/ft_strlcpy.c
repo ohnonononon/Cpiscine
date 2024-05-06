@@ -6,13 +6,10 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 17:10:28 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/03 20:38:26 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/06 13:45:12 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
-//#include <stdio.h>
-//
 unsigned int	ft_strlen(char *str)
 {
 	unsigned int	i;
@@ -42,6 +39,9 @@ unsigned int	ft_strlcpy(char *dst, char *src, unsigned int size)
 	dst[i] = '\0';
 	return (src_len);
 }
+//#include <string.h>
+//#include <stdio.h>
+//
 //
 //int	main()
 //{
