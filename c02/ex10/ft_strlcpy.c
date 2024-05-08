@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 17:10:28 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/06 13:45:12 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/08 21:49:23 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,9 @@ unsigned int	ft_strlcpy(char *dst, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	src_len;
-	unsigned int	dst_len;
 
 	i = 0;
 	src_len = ft_strlen(src);
-	dst_len = ft_strlen(dst);
 	if (size == 0)
 		return (src_len);
 	while (i < size - 1 && i < src_len)

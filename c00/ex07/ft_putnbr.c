@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:10:59 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/01 18:34:15 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/08 13:53:10 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ void	ft_putnbr(int nb)
 	if (nb / 10)
 		ft_putnbr(nb / 10);
 }
-
+/*
 int	main(void)
 {
 	ft_putnbr(2345678);
 	return (0);
 }
+*/

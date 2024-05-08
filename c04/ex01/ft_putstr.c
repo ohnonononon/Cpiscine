@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 13:52:14 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/08 13:54:54 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/08 20:38:51 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 void	ft_putstr(char *str)
 {
 	while (*str != '\0')
-	{
-		write(1, str, 1);
-		str++;
-	}
+		write(1, *(str++), 1);
 }
+
+// char	c;
+// char 1 byte
+// 0000 0000
+// c = c ^ 32;
