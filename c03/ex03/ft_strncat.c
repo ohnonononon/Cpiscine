@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 14:17:00 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/06 18:40:49 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/08 13:45:04 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ char	*ft_strncat(char *dst, char *src, unsigned int nb)
 		dst[dst_len + i] = src[i];
 		i++;
 	}
-	return (dst_len);
+	return (dst);
 }
