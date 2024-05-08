@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 14:23:05 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/06 19:50:39 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/08 13:47:37 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char	*ft_strstr(char *str, char *needle)
 		}
 		j++;
 	}
-	return (NULL);
+	return (0);
 }
