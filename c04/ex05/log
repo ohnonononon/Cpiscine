@@ -1,0 +1,37 @@
+═════════════════════════════════ Testing ex05 ═════════════════════════════════
+
+Executing: norminette -R CheckForbiddenSourceHeader ft_atoi_base.c:
+ft_atoi_base.c: OK!
+
+Executing: gcc -Wall -Wextra -Werror main.c ft_atoi_base.c:
+gcc: OK!
+
+Executing: ./a.out | cat -e:
+42:42$
+-42:-42$
+42:42$
+0:0$
+0:0$
+0:0$
+0:0$
+0:0$
+0:0$
+2147483647 : 2147483647 (equals: 1)$
+-2147483648 : -8 (equals: 0)$
+2147483647 : 2147483647 (equals: 1)$
+-2143247366 : 0 (equals: 0)$
+
+
+Executing: diff --text expected out:
+< expected, > your result
+11c11
+< -2147483648 : -2147483648 (equals: 1)$
+---
+> -2147483648 : -8 (equals: 0)$
+13c13
+< -2143247366 : -2143247366 (equals: 1)$
+---
+> -2143247366 : 0 (equals: 0)$
+
+
+══════════════════════════════    Ex05 failed!    ══════════════════════════════
