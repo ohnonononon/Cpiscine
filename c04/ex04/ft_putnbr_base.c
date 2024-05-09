@@ -6,71 +6,62 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 15:00:35 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/08 17:37:29 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/09 22:50:07 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-int	aux_baselen(char *str)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = i + 1;
-	if (!str)
-		return (1);
-	while (str[i])
-	{
-		while(str[i] != str[i + j] && str[i + j] != '\0')
-		{
-			j++;
-			if (str[i + j] == '+' || str[i + j] == '-')
-				return (1);
-			if (str[i] == str[i + j])
-				return (1);
-		}
-		i++;
-	}
-	if (i == 1)
-		return (1);
-	return (i);
-}
-
-void	print_minint(int digits, char *base)
-{
-	baselen
-}
 
 void	print(char c)
 {
 	write(1, &c, 1);
 }
 
-void	aux_neg(int	baselen, char *base)
+int	parse_base(char *base, int *len)
 {
-	print(base['-' % baselen]);
-	return (-1);
+	int	i;
+
+	*len = 0;
+	while (base[*len] != '\0')
+		(*len)++;
+	if (*len <= 1)
+		return (1);
+	*len = 0;
+	while (base[*len] != '\0')
+	{
+		i = *len + 1;
+		if (base[*len] == '+' || base[*len] == '-')
+			return (1);
+		if (base[*len] < 32 || base[*len] > 126)
+			return (1);
+		while (base[i] && base[*len] != base[i])
+			i++;
+		if (base[*len] == base[i] && base[*len] != '\0')
+			return (1);
+		(*len)++;
+	}
+	return (*len);
+}
+
+void	recursive_printer(int nb, int baselen, char *base)
+{
+	if (nb / baselen)
+		recursive_printer(nb / baselen, baselen, base);
+	print(base[nb % baselen]);
 }
 
 void	ft_putnbr_base(int nb, char *base)
 {
-	int	i;
-	int	baselen;
+	int		baselen;
+	long	nbr;
 
-	i = 0;
-	baselen = aux_baselen(base);
-	if (baselen == 1)
+	nbr = (long) nb;
+	if (parse_base(base, &baselen) == 1)
 		return ;
-	if (nb == -2147483648)
-	{
-		print_minint(baselen, base);
-		return ;
-	}
 	if (nb < 0)
-		nb *= aux_neg(baselen, base);
-	if (nb / baselen)
-		ft_putnbr_base(nb / baselen);
-	print(base[nb % baselen] + '0');
+	{
+		write(1, "-", 1);
+		nbr = nbr * -1;
+	}
+	recursive_printer(nbr, baselen, base);
 }
