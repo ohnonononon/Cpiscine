@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 14:30:30 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/09 22:52:10 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:55:52 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int	ft_atoi(char *str)
 }
 /*
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
@@ -55,15 +56,15 @@ int	main(void)
 	char	*s4 = "-2+3";
 	char	*s5 = "---345";
 
-	c = ft_atoi(s1);
-	printf("s1	%s	%d\n", s1, c);
-	c = ft_atoi(s2);
-	printf("s2	%s	%d\n", s2, c);
-	c = ft_atoi(s3);
-	printf("s3	%s	%d\n", s3, c);
-	c = ft_atoi(s4);
-	printf("s4	%s	%d\n", s4, c);
-	c = ft_atoi(s5);
-	printf("s5	%s	%d\n", s5, c);
+	c = ft_atoi("–2147483648");
+	printf("s1	%s	%d\n", "–2147483648", c);
+//	c = ft_atoi(s2);
+//	printf("s2	%s	%d\n", s2, c);
+//	c = ft_atoi(s3);
+//	printf("s3	%s	%d\n", s3, c);
+//	c = ft_atoi(s4);
+//	printf("s4	%s	%d\n", s4, c);
+//	c = ft_atoi(s5);
+//	printf("s5	%s	%d\n", s5, c);
 	return (0);
 }*/
