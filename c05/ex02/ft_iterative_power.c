@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 13:35:48 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/10 14:18:22 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/11 01:42:44 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_iterative_power(int nb, int power)
 	}
 	return (result);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -57,4 +57,4 @@ int	main(void)
 	res = ft_iterative_power(i, pwr);
 	printf("%d ^%d	%d\n", i, pwr, res); 
 	return (0);
-}
+}*/

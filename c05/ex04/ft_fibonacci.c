@@ -6,17 +6,19 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 14:23:20 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/10 14:43:36 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/11 01:44:55 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_fibonacci(int index)
 {
-	if (index <= 0)
+	if (index < 0)
+		return (-1);
+	if (index == 0)
 		return (0);
 	if (index == 1)
 		return (1);
-	return(ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 /*
 #include <stdio.h>
