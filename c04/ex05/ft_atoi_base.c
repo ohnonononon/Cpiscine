@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 22:55:48 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/10 00:44:58 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/10 12:03:08 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,10 @@ int	aux_indexzero(char c, char *base)
 
 int	ft_atoi_base(char *str, char *base)
 {
-	int	i;
-	int	result;
-	int	sign;
-	int	baselen;
+	int		result;
+	int		i;
+	int		sign;
+	int		baselen;
 
 	i = 0;
 	sign = 1;
@@ -98,13 +98,13 @@ int	ft_atoi_base(char *str, char *base)
 		result = result * baselen + aux_indexzero(str[i++], base);
 	return (sign * result);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
 {
 	int	c;
-	char	*s1 =  "\f-80000000";
+	char	*s1 =  "-80000000";
 	char	*s2 = "12 3";
 	char	*s3 = "1a2";
 	char	*s4 = "-2+3";
@@ -122,4 +122,4 @@ int	main(void)
 //	c = ft_atoi_base(s5, base);
 //	printf("s5	%s	%d\n", s5, c);
 	return (0);
-}
+}*/
