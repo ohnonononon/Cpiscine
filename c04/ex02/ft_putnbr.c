@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:10:59 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/08 13:53:10 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:29:30 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,25 @@ void	pchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	if (nb == -2147483648)
+	long	nbr;
+
+	nbr = nb;
+	if (nbr < 0)
 	{
-		write(1, "-2147483648", 11);
-		return ;
-	}
-	if (nb < 0)
-	{
-		nb = -nb;
+		nbr = -nbr;
 		write(1, "-", 1);
 	}
-		pchar(nb % 10 + '0');
-	if (nb / 10)
-		ft_putnbr(nb / 10);
+	if (nbr / 10)
+		ft_putnbr(nbr / 10);
+	pchar(nbr % 10 + '0');
 }
+
 /*
+#include <limits.h>
+
 int	main(void)
 {
-	ft_putnbr(2345678);
+	ft_putnbr(INT_MAX + 1);
 	return (0);
 }
 */
