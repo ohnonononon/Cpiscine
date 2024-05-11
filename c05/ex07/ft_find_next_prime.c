@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 01:46:41 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/11 02:48:09 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/11 20:16:41 by ohnudes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@ int	is_prime(int nb)
 {
 	int	i;
 
-	if (nb < 2)
-		return (0);
 	i = 2;
 	while (i <= nb / i)
 	{
@@ -28,7 +26,7 @@ int	is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
-	if (nb < 2)
+	if (nb <= 2)
 		return (2);
 	if (nb % 2 == 0)
 		nb++;
