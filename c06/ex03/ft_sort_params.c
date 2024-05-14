@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:38:17 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/13 19:29:33 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/14 19:27:56 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,6 @@ int	main(int ac, char **av)
 		return (0);
 	}
 	av = sort_strs(av + 1, ac - 1);
-	print_matrix(av + 1, ac - 1);
+	print_matrix(av , ac);
 	return (0);
 }
