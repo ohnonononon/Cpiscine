@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:35:57 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/13 13:37:25 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/14 22:11:54 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,6 @@ int	main(int ac, char **av)
 	int		i;
 
 	i = ac - 1;
-	if (ac < 2)
-	{
-		write(1, "\n", 1);
-		return (0);
-	}
 	while (i > 0)
 	{
 		ft_putstr(av[i]);
