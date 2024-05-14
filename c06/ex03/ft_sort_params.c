@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:38:17 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/14 19:27:56 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/14 22:12:40 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,6 @@ void	print_matrix(char **tab, int size)
 
 int	main(int ac, char **av)
 {
-	if (ac < 2)
-	{
-		write(1, "\n", 1);
-		return (0);
-	}
 	if (ac == 2)
 	{
 		ft_putstr(av[1]);
