@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:24:04 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/13 19:01:23 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/15 13:01:32 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(int ac, char **av)
 {
-	int	i;
+	int		i;
 	char	*str;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 13:38:17 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/14 22:12:40 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/15 13:02:18 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**sort_strs(char **tab, int size)
 		else
 			i++;
 	}
-	return (tab); 
+	return (tab);
 }
 
 void	print_matrix(char **tab, int size)
@@ -73,6 +73,6 @@ int	main(int ac, char **av)
 		return (0);
 	}
 	av = sort_strs(av + 1, ac - 1);
-	print_matrix(av , ac);
+	print_matrix(av, ac);
 	return (0);
 }
