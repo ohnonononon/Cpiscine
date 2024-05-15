@@ -6,7 +6,7 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 22:30:46 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/15 10:27:41 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/15 10:28:59 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	*ft_range(int min, int max)
 {
-	int 	i;
+	int	i;
 	int	*arr;
 
 	arr = NULL;
@@ -29,8 +29,8 @@ int	*ft_range(int min, int max)
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
-	int 	i;
-	int 	og_min;
+	int	i;
+	int	og_min;
 
 	i = 0;
 	og_min = min;
@@ -45,7 +45,6 @@ int	ft_ultimate_range(int **range, int min, int max)
 	while (min < max)
 		(*range)[i++] = min++;
 	return (max - og_min);
-	
 }
 /*
 #include <stdio.h>
