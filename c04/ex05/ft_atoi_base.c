@@ -6,18 +6,26 @@
 /*   By: nimatura <nimatura@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 22:55:48 by nimatura          #+#    #+#             */
-/*   Updated: 2024/05/10 12:03:08 by nimatura         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:14:21 by nimatura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	aux_legitstr(char c)
+#include <stdio.h>
+
+int	legit_nb(char c, char *base)
 {
-	if (c >= '1' && c <= '9')
-		return (1);
-	else if (c >= 'a' && c <= 'z')
-		return (1);
-	else if (c >= 'A' && c <= 'Z')
-		return (1);
+	int	i;
+
+	i = 0;
+	if (c == '\0')
+		return (0);
+	while (c != base[i] && base[i] != '\0')
+		i++;
+	if (c == base[i])
+	{
+		printf("legit	%d\n", i);/// PRINTF
+		return (i+1);
+	}
 	return (0);
 }
 
@@ -59,7 +67,7 @@ int	parse_base(char *base, int *len)
 	}
 	return (i);
 }
-
+/*
 int	aux_indexzero(char c, char *base)
 {
 	int	i;
@@ -72,7 +80,7 @@ int	aux_indexzero(char c, char *base)
 		i++;
 	}
 	return (0);
-}
+}*/
 
 int	ft_atoi_base(char *str, char *base)
 {
@@ -94,22 +102,25 @@ int	ft_atoi_base(char *str, char *base)
 			sign = -sign;
 		i++;
 	}
-	while (str[i] != '\0' && aux_legitstr(str[i]))
-		result = result * baselen + aux_indexzero(str[i++], base);
+	while (str[i] != '\0' && legit_nb(str[i], base))
+	{
+		result = result * baselen + legit_nb(str[i], base);
+		printf("check baselen	%d\n", baselen);
+		i++;
+	}
 	return (sign * result);
 }
-/*
-#include <stdio.h>
+
 
 int	main(void)
 {
 	int	c;
-	char	*s1 =  "-80000000";
+	char	*s1 =  "pikachu";
 	char	*s2 = "12 3";
 	char	*s3 = "1a2";
 	char	*s4 = "-2+3";
 	char	*s5 = "---345";
-	char	*base = "0123456789abcdef";
+	char	*base = "pikachu";
 
 	c = ft_atoi_base(s1, base);
 	printf("s1	%s	%d\n", s1, c);
@@ -122,4 +133,4 @@ int	main(void)
 //	c = ft_atoi_base(s5, base);
 //	printf("s5	%s	%d\n", s5, c);
 	return (0);
-}*/
+}
